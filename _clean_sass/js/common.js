@@ -1,5 +1,27 @@
 $(document).ready(function() {
 
+	//Jssor slider: builds_slider
+  var options = {
+		$SlideWidth: 220,  
+		$SlideSpacing: 3, 					                
+		$DisplayPieces: 4,  
+		$SlideSpacing: 12,
+		$CaptionSliderOptions: {
+			$Class: $JssorCaptionSlider$,
+			$PlayInMode: 1,
+			$PlayOutMode: 3
+    },
+  	$ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$,
+      $ChanceToShow: 2
+    }
+  };       
+	var builds__slider_new = new $JssorSlider$("builds__slider_new", options);
+	var builds__slider_used = new $JssorSlider$("builds__slider_used", options);
+	var builds__slider_commercial = new $JssorSlider$("builds__slider_commercial", options);
+	var builds__slider_resident = new $JssorSlider$("builds__slider_resident", options);
+	var builds__slider_news = new $JssorSlider$("builds__slider_news", options);	
+
 	//Jssor slider: main-slider
   var options = { 
   	$AutoPlay: true,
@@ -14,15 +36,26 @@ $(document).ready(function() {
       $SpacingX: 10,   
     }
 	};
-  var jssor_slider1 = new $JssorSlider$('main-slider', options);
+  var main_slider = new $JssorSlider$('main-slider', options);
 
   //responsive code begin
   //you can remove responsive code if you don't want the slider scales
   //while window resizes
   function ScaleSlider() {
       var parentWidth = $('#main-slider').parent().width();
+      var parentWidth_builds_slider_new = $('#builds__slider_new').parent().width();
+      var parentWidth_builds_slider_used = $('#builds__slider_used').parent().width();
+      var parentWidth_builds_slider_commercial = $('#builds__slider_commercial').parent().width();
+      var parentWidth_builds_slider_resident = $('#builds__slider_resident').parent().width();
+      var parentWidth_builds_slider_news = $('#builds__slider_news').parent().width();
+
       if (parentWidth) {
-          jssor_slider1.$ScaleWidth(parentWidth);
+          main_slider.$ScaleWidth(parentWidth);
+          builds__slider_new.$ScaleWidth(parentWidth_builds_slider_new);
+          builds__slider_used.$ScaleWidth(parentWidth_builds_slider_used);
+          builds__slider_commercial.$ScaleWidth(parentWidth_builds_slider_commercial);
+          builds__slider_resident.$ScaleWidth(parentWidth_builds_slider_resident);
+          builds__slider_news.$ScaleWidth(parentWidth_builds_slider_news);
       }
       else
           window.setTimeout(ScaleSlider, 30);
