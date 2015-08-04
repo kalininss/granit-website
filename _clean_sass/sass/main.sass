@@ -1,0 +1,260 @@
+@import "bourbon/bourbon"
+
+html.js .loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+$red-color: #e31e24
+
+body
+	font-family: "Open Sans", sans-serif
+	font-weight: normal
+	color: #676672
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+	background: #dbdcde url(../img/body-background.png)
+a
+	color: #676672
+	text-decoration: none
+	&:hover
+		color: #e31e24
+		text-decoration: underline
+h2,.h2
+	font-size: 36px
+	font-weight: 300
+h3,.h3
+	font-size: 18px
+	font-weight: 600
+h4,.h4
+	font-size: 15px
+	font-weight: 600
+h3,.h3
+	font-size: 13px
+	font-weight: 400
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+.container
+	background-color: #FFF
+.header
+	&__info
+		.container
+			padding-top: 50px
+			padding-bottom: 15px
+	&__nav
+		.container
+			padding-bottom: 23px
+	&__favourite
+		margin-left: 30px
+		margin-top: 7px
+	&__phone
+		line-height: 30px
+.favourite__link
+	font-weight: 600
+	color: #71707b
+.phone
+	color: #5c5b68
+.phone__code
+	font-size: 14px
+.phone__number
+	font-size: 26px
+.button
+	border: 2px solid
+	padding: 10px 15px
+	&:hover,
+	&:focus
+		text-decoration: none
+.button_request
+	color: $red-color
+	&:focus
+		color: $red-color
+.header__button
+  margin-top: 7px
+  float: right
+.nav__list
+	text-align: center
+	margin: 0
+	padding: 0
+	background-color: #FFF
+.menu-item
+	display: inline-block
+	margin-right: -3px
+	padding: 5px 10px
+	background-color: $red-color
+.menu-item__link
+	color: #fff
+
+/* Responsive menu */
+
+.menu
+	display:block
+	margin: 0 -1px 0 -1px
+	padding: 0
+ 
+.menu li
+	display: inline-block
+	position: relative
+	z-index: 100
+	margin-right: -3px
+ 
+.menu li a 
+	font-weight:600
+	text-decoration:none
+	padding:10px 55px
+	display:block
+	color:#ffffff
+	transition: all 0.2s ease-in-out 0s
+	background-color: $red-color
+
+.menu ul ul a
+
+
+.menu li a:hover
+	text-decoration: underline
+
+/* hide the second level menu */
+.menu ul 
+	display: none
+	margin: 0
+	padding: 0
+	width: 190px
+	position: absolute
+	top: 43px
+	left: 0px
+	background: #ffffff
+
+ 
+/* display second level menu on hover */
+.menu li:hover > ul
+ display: block
+ 
+.menu ul li 
+	display:block
+	float: none
+	background:none
+	margin:0
+	padding:0
+
+ 
+.menu ul li a 
+	font-size:12px
+	font-weight:normal
+	display:block
+	color:#797979
+	border-left:3px solid #ffffff
+	background:#ffffff
+ 
+.menu ul li a:hover, .menu ul li:hover > a
+	background:#f0f0f0
+	border-left:3px solid $red-color
+	color:#797979
+
+/* change level 3 menu positions */
+.menu ul ul 
+	left: 189px
+	top: 0px
+
+.mobile-menu
+	display:none
+	width:100%
+	padding:11px
+	background:#3E4156
+	color:#ffffff
+	text-transform:uppercase
+	font-weight:600
+
+.mobile-menu:hover
+	background:#3E4156
+	color:#ffffff
+	text-decoration:none
+
+.arrow
+	position: absolute
+	background-image: url(../img/arrows.png)
+	background-repeat: no-repeat
+	cursor: pointer
+.bullets 
+	position: absolute
+            
+.bullets div, .bullets div:hover, .bullets .av 
+  position: relative
+  /* size of bullet elment */
+  width: 45px
+  height: 6px
+  overflow: hidden
+  cursor: pointer
+            	
+.bullets div 
+	background-color: #dfe4e7 
+.bullets div:hover, .bullets .av:hover 
+	/*background-color: #d3d3d38*/
+.bullets .av 
+	background-color: $red-color 
+.main-slider
+	.container
+		padding-bottom: 27px
+.slider
+	.arrow
+		width: 39px
+		height: 77px
+		&:hover
+			background-position-y: -77px
+	.arrow__right
+		background-position-x: -39px
+
+.builds
+  padding: 49px 41px 15px
+  margin-top: 65px
+  border: 2px solid #dce1e5
+  position: relative
+
+.builds__descr
+	line-height: 24px
+
+.builds_title
+	position: absolute
+	top: -63px
+	left: 0
+	background-color: #fff
+	padding-left: 43px
+	padding-right: 46px
+
+
+.builds_new
+	margin-top: 45px
+
+
+
+
