@@ -15,14 +15,14 @@ $(document).ready(function() {
       $Class: $JssorArrowNavigator$,
       $ChanceToShow: 2
     }
-  };       
+  };   
 	var builds__slider_new = new $JssorSlider$("builds__slider_new", options);
 	var builds__slider_used = new $JssorSlider$("builds__slider_used", options);
 	var builds__slider_commercial = new $JssorSlider$("builds__slider_commercial", options);
 	var builds__slider_resident = new $JssorSlider$("builds__slider_resident", options);
 	var builds__slider_news = new $JssorSlider$("builds__slider_news", options);	
 
-	//Jssor slider: main-slider
+  //Jssor slider: main-slider
   var options = { 
   	$AutoPlay: true,
   	$ArrowNavigatorOptions: {
@@ -35,8 +35,29 @@ $(document).ready(function() {
       $AutoCenter: 1,
       $SpacingX: 10,   
     }
-	};
+	};   
   var main_slider = new $JssorSlider$('main-slider', options);
+
+	//Jssor slider: testimonials-slider
+  var options = {
+		$SlideWidth: 431,  
+		$SlideSpacing: 3, 					                
+		$DisplayPieces: 2,  
+		$SlideSpacing: 50,
+		$CaptionSliderOptions: {
+			$Class: $JssorCaptionSlider$,
+			$PlayInMode: 1,
+			$PlayOutMode: 3
+    },
+  	$ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$,
+      $ChanceToShow: 2
+    }
+  };   
+  var testimonials_slider = new $JssorSlider$('testimonials__slider', options);
+
+	
+
 
   //responsive code begin
   //you can remove responsive code if you don't want the slider scales
