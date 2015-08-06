@@ -27,8 +27,8 @@ html.js .loader .loader_inner {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  color: #676672;
+  font-family: "OpenSansRegular", sans-serif;
+  color: #333;
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -38,33 +38,38 @@ body {
 }
 
 a {
-  color: #676672;
+  color: #333;
   text-decoration: none;
 }
 
 a:hover {
   color: #e31e24;
   text-decoration: underline;
+  outline: none;
+}
+
+a:active {
+  outline: none;
 }
 
 h2, .h2 {
   font-size: 36px;
-  font-weight: 300;
+  font-family: "OpenSansLight", sans-serif;
 }
 
 h3, .h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 h4, .h4 {
   font-size: 15px;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 h5, .h5 {
   font-size: 13px;
-  font-weight: 400;
+  font-family: "OpenSansRegular", sans-serif;
 }
 
 body input:focus:required:invalid,
@@ -100,12 +105,8 @@ body textarea:required:valid {
 }
 
 .favourite__link {
-  font-weight: 600;
-  color: #71707b;
-}
-
-.phone {
-  color: #5c5b68;
+  font-family: "OpenSansSemiBold", sans-serif;
+  font-size: 13px;
 }
 
 .phone__code {
@@ -119,6 +120,8 @@ body textarea:required:valid {
 .button {
   border: 2px solid;
   padding: 10px 15px;
+  height: 46px;
+  display: inline-block;
 }
 
 .button:hover,
@@ -136,7 +139,7 @@ body textarea:required:valid {
 }
 
 .header__button {
-  margin-top: 7px;
+  margin-top: 14px;
   float: right;
 }
 
@@ -235,14 +238,20 @@ body textarea:required:valid {
   display: none;
   width: 100%;
   padding: 11px;
-  background: #3E4156;
+  background: #e31e24;
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .mobile-menu:hover {
-  background: #3E4156;
+  background: #e31e24;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mobile-menu:focus {
+  background: #e31e24;
   color: #ffffff;
   text-decoration: none;
 }
@@ -283,8 +292,12 @@ body textarea:required:valid {
   padding-bottom: 27px;
 }
 
-.main-slider .container .arrow:hover {
-  background-position-y: -77px;
+.main-slider .container .arrow__left:hover {
+  background-position: 0 -77px;
+}
+
+.main-slider .container .arrow__right:hover {
+  background-position: -39px -77px;
 }
 
 .slider .arrow {
@@ -293,7 +306,7 @@ body textarea:required:valid {
 }
 
 .slider .arrow__right {
-  background-position-x: -39px;
+  background-position: -39px 0;
 }
 
 .builds {
@@ -315,6 +328,7 @@ body textarea:required:valid {
   background-color: #fff;
   padding-left: 43px;
   padding-right: 46px;
+  color: #000;
 }
 
 .builds_title:hover {
@@ -328,7 +342,6 @@ body textarea:required:valid {
 .builds__slider .arrow {
   width: 12px;
   height: 24px;
-  background-position-y: -155px;
   opacity: .8;
 }
 
@@ -337,7 +350,11 @@ body textarea:required:valid {
 }
 
 .builds__slider .arrow__right {
-  background-position-x: -12px;
+  background-position: -12px -155px;
+}
+
+.builds__slider .arrow__left {
+  background-position: 0 -155px;
 }
 
 .slide__add-info {
@@ -348,7 +365,7 @@ body textarea:required:valid {
   background-color: #e31e24;
   line-height: 13px;
   color: #fff;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
   position: absolute;
   padding: 12px 11px;
   top: 168px;
@@ -366,7 +383,7 @@ body textarea:required:valid {
 
 .add-info__price {
   color: #e31e24;
-  font-weight: 700;
+  font-family: "OpenSansBold", sans-serif;
   float: right;
   width: 33%;
 }
@@ -386,7 +403,7 @@ body textarea:required:valid {
   border-bottom: 3px solid #e31e24;
   text-align: center;
   line-height: 360px;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 .slide__more-info:hover {
@@ -395,7 +412,7 @@ body textarea:required:valid {
 }
 
 .slide__title {
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
   position: absolute;
   top: -6px;
 }
@@ -420,10 +437,6 @@ body textarea:required:valid {
   top: 195px;
 }
 
-.main-news .container {
-  background-image: url(../img/main-news-background.jpg);
-}
-
 .slide__more-info_news {
   background-image: url(../img/news-more-link-background.png);
 }
@@ -440,19 +453,11 @@ body textarea:required:valid {
 }
 
 .slide__add-info__news {
-  top: 181px;
+  top: 180px;
 }
 
 .builds_news {
   padding-bottom: 47px;
-}
-
-.builds_title_black {
-  color: #000;
-}
-
-.builds_title_black:hover {
-  text-decoration: none;
 }
 
 .slide__quote {
@@ -474,7 +479,7 @@ body textarea:required:valid {
 
 .slide__author {
   color: #e31e24;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
   font-size: 14px;
   line-height: 35px;
 }
@@ -497,7 +502,7 @@ body textarea:required:valid {
 }
 
 .footer__logo {
-  margin: 10px 0;
+  margin: 10px 0 0;
 }
 
 .footer__phone {
@@ -510,7 +515,6 @@ body textarea:required:valid {
 }
 
 .footer__button {
-  line-height: 46px;
   display: block;
   float: right;
   margin-left: 17px;
@@ -544,23 +548,30 @@ body textarea:required:valid {
   display: inline-block;
   background-image: url(../img/social-icons.png);
   background-repeat: no-repeat;
-  background-position-x: -3px;
-}
-
-.social__icon:hover {
-  background-position-x: -55px;
 }
 
 .social__icon_vk {
-  background-position-y: -5px;
+  background-position: -3px -5px;
+}
+
+.social__icon_vk:hover {
+  background-position: -55px -5px;
 }
 
 .social__icon_fb {
-  background-position-y: -44px;
+  background-position: -3px -44px;
+}
+
+.social__icon_fb:hover {
+  background-position: -55px -44px;
 }
 
 .social__icon_in {
-  background-position-y: -95px;
+  background-position: -3px -95px;
+}
+
+.social__icon_in:hover {
+  background-position: -55px -95px;
 }
 
 .slice_col p {
@@ -577,12 +588,12 @@ body textarea:required:valid {
   position: absolute;
   top: 5px;
   left: -23px;
-  color: #acadb4;
+  color: #666;
 }
 
 .mailto {
   font-size: 15px;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 .slice__small {
@@ -592,7 +603,7 @@ body textarea:required:valid {
 }
 
 .slice__phone {
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 .h2o {
@@ -600,11 +611,20 @@ body textarea:required:valid {
 }
 
 .h2o-name {
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
   margin-top: 20px;
 }
 
 .slice__bottom {
   position: absolute;
   top: 209px;
+}
+
+.mobile-menu__icon {
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.slice_col ul li a {
+  font-family: "OpenSansItalic", sans-serif;
 }

@@ -28,8 +28,8 @@ $red-color: #e31e24
 
 body
 	font-family: "Open Sans", sans-serif
-	font-weight: normal
-	color: #676672
+	font-family: "OpenSansRegular", sans-serif
+	color: #333
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -37,23 +37,26 @@ body
 	-webkit-font-smoothing: antialised
 	overflow-x: hidden
 a
-	color: #676672
+	color: #333
 	text-decoration: none
 	&:hover
 		color: #e31e24
 		text-decoration: underline
+		outline: none
+	&:active
+		outline: none
 h2,.h2
 	font-size: 36px
-	font-weight: 300
+	font-family: "OpenSansLight", sans-serif
 h3,.h3
 	font-size: 18px
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 h4,.h4
 	font-size: 15px
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 h5,.h5
 	font-size: 13px
-	font-weight: 400
+	font-family: "OpenSansRegular", sans-serif
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -78,10 +81,8 @@ body textarea:required:valid
 	&__phone
 		line-height: 30px
 .favourite__link
-	font-weight: 600
-	color: #71707b
-.phone
-	color: #5c5b68
+	font-family: "OpenSansSemiBold", sans-serif
+	font-size: 13px
 .phone__code
 	font-size: 14px
 .phone__number
@@ -89,6 +90,8 @@ body textarea:required:valid
 .button
 	border: 2px solid
 	padding: 10px 15px
+	height: 46px
+	display: inline-block
 	&:hover,
 	&:focus
 		text-decoration: none
@@ -98,7 +101,7 @@ body textarea:required:valid
 	&:focus
 		color: $red-color
 .header__button
-  margin-top: 7px
+  margin-top: 14px
   float: right
 .nav__list
 	text-align: center
@@ -185,15 +188,18 @@ body textarea:required:valid
 	display:none
 	width:100%
 	padding:11px
-	background:#3E4156
+	background: $red-color
 	color:#ffffff
 	text-transform:uppercase
 	font-weight:600
-
-.mobile-menu:hover
-	background:#3E4156
-	color:#ffffff
-	text-decoration:none
+	&:hover
+		background: $red-color
+		color:#ffffff
+		text-decoration:none
+	&:focus
+		background: $red-color
+		color:#ffffff
+		text-decoration:none
 
 .arrow
 	position: absolute
@@ -220,14 +226,17 @@ body textarea:required:valid
 .main-slider
 	.container
 		padding-bottom: 27px
-		.arrow:hover
-			background-position-y: -77px
+		.arrow__left:hover
+			background-position: 0 -77px
+		.arrow__right:hover
+			background-position: -39px -77px
+
 .slider
 	.arrow
 		width: 39px
 		height: 77px
 	.arrow__right
-		background-position-x: -39px
+		background-position: -39px 0
 
 .builds
   padding: 49px 0 15px
@@ -246,6 +255,7 @@ body textarea:required:valid
 	background-color: #fff
 	padding-left: 43px
 	padding-right: 46px
+	color: #000
 	&:hover
 		text-decoration: underline
 
@@ -257,19 +267,20 @@ body textarea:required:valid
 	.arrow
 		width: 12px
 		height: 24px
-		background-position-y: -155px
 		opacity: .8
 		&:hover
 			opacity: 1
 	.arrow__right
-		background-position-x: -12px
+		background-position: -12px -155px
+	.arrow__left
+		background-position: 0 -155px
 .slide__add-info
 	font-size: 13px
 .slide__inner-info
 	background-color: $red-color
 	line-height: 13px
 	color: #fff
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 	position: absolute
 	padding: 12px 11px
 	top: 168px
@@ -284,7 +295,7 @@ body textarea:required:valid
 	background-color: #f2f5f7 
 .add-info__price
 	color: $red-color
-	font-weight: 700
+	font-family: "OpenSansBold", sans-serif
 	float: right
 	width: 33%
 .add-info__addres
@@ -300,12 +311,12 @@ body textarea:required:valid
 	border-bottom: 3px solid $red-color
 	text-align: center
 	line-height: 360px
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 	&:hover
 		opacity: 1
 		text-decoration: none
 .slide__title
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 	position: absolute
 	top: -6px
 .builds-slide__img
@@ -319,9 +330,6 @@ body textarea:required:valid
 		top: 232px
 	.slide__inner-info
 		top: 195px
-.main-news
-	.container
-		background-image: url(../img/main-news-background.jpg)		
 .slide__more-info_news
 	background-image: url(../img/news-more-link-background.png)
 .slide__inner-info__news
@@ -332,13 +340,9 @@ body textarea:required:valid
 .news-slide__img
 	height: 180px !important	
 .slide__add-info__news
-	top: 181px
+	top: 180px
 .builds_news
 	padding-bottom: 47px
-.builds_title_black
-	color: #000
-	&:hover
-		text-decoration: none
 .slide__quote
  font-size: 34px
  display: block
@@ -354,7 +358,7 @@ body textarea:required:valid
 	display: block;
 .slide__author
 	color: $red-color
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 	font-size: 14px
 	line-height: 35px
 .testimonials-slide__img
@@ -367,14 +371,13 @@ body textarea:required:valid
 .footer__slice_first
 	background-color: $red-color
 .footer__logo
-	margin: 10px 0
+	margin: 10px 0 0
 .footer__phone
 	margin-top: 3px
 	float: right
 .phone__white
 	color: #fff
 .footer__button
-	line-height: 46px
 	display: block
 	float: right
 	margin-left: 17px
@@ -399,15 +402,18 @@ body textarea:required:valid
 	display: inline-block
 	background-image: url(../img/social-icons.png)
 	background-repeat: no-repeat
-	background-position-x: -3px
-	&:hover
-		background-position-x: -55px
 .social__icon_vk
-	background-position-y: -5px
+	background-position: -3px  -5px
+	&:hover
+		background-position:  -55px  -5px
 .social__icon_fb
-	background-position-y: -44px
+	background-position:  -3px -44px
+	&:hover
+		background-position:   -55px -44px
 .social__icon_in
-	background-position-y: -95px
+	background-position:  -3px -95px
+	&:hover
+		background-position:   -55px -95px
 .slice_col 
 	p
 		position: relative
@@ -419,26 +425,29 @@ body textarea:required:valid
 		position: absolute
 		top: 5px
 		left: -23px
-		color: #acadb4
+		color: #666
 .mailto
 	font-size: 15px
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 .slice__small
 	font-size: 12px
 	display: inline-block
 	margin-right: 5px
 .slice__phone
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 .h2o
 	color: $red-color
 .h2o-name
-	font-weight: 600
+	font-family: "OpenSansSemiBold", sans-serif
 	margin-top: 20px
 .slice__bottom	
 	position: absolute
 	top: 209px
-
-
+.mobile-menu__icon 
+	margin-right: 10px
+	font-size: 17px
+.slice_col ul li a
+	font-family: "OpenSansItalic", sans-serif
 
 
 
