@@ -26,7 +26,6 @@ html.js .loader .loader_inner {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   font-family: "OpenSansRegular", sans-serif;
   color: #333;
   font-size: 16px;
@@ -97,11 +96,12 @@ body textarea:required:valid {
 
 .header__favourite {
   margin-left: 30px;
-  margin-top: 7px;
+  margin-top: 13px;
 }
 
 .header__phone {
   line-height: 30px;
+  margin-top: 6px;
 }
 
 .favourite__link {
@@ -119,8 +119,8 @@ body textarea:required:valid {
 
 .button {
   border: 2px solid;
-  padding: 10px 15px;
-  height: 46px;
+  padding: 11px 15px 12px;
+  height: 49px;
   display: inline-block;
 }
 
@@ -139,7 +139,6 @@ body textarea:required:valid {
 }
 
 .header__button {
-  margin-top: 14px;
   float: right;
 }
 
@@ -175,7 +174,7 @@ body textarea:required:valid {
 }
 
 .menu li a {
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
   text-decoration: none;
   padding: 10px 55px;
   display: block;
@@ -215,7 +214,7 @@ body textarea:required:valid {
 
 .menu ul li a {
   font-size: 12px;
-  font-weight: normal;
+  font-family: "OpenSansRegular", sans-serif;
   display: block;
   color: #797979;
   border-left: 3px solid #ffffff;
@@ -241,7 +240,7 @@ body textarea:required:valid {
   background: #e31e24;
   color: #ffffff;
   text-transform: uppercase;
-  font-weight: 600;
+  font-family: "OpenSansSemiBold", sans-serif;
 }
 
 .mobile-menu:hover {
@@ -322,6 +321,8 @@ body textarea:required:valid {
 }
 
 .builds_title {
+  font-family: "OpenSansLight", sans-serif;
+  font-size: 36px;
   position: absolute;
   top: -63px;
   left: 0;
@@ -470,7 +471,6 @@ body textarea:required:valid {
 }
 
 .slide__add-area {
-  color: #777;
   font-size: 14px;
   line-height: 20px;
   margin-top: -4px;
@@ -493,14 +493,6 @@ body textarea:required:valid {
   margin-top: 36px;
 }
 
-.footer__slice {
-  background-color: #e6e9ec;
-}
-
-.footer__slice_first {
-  background-color: #e31e24;
-}
-
 .footer__logo {
   margin: 10px 0 0;
 }
@@ -518,10 +510,6 @@ body textarea:required:valid {
   display: block;
   float: right;
   margin-left: 17px;
-}
-
-.footer__slice_bottom {
-  padding: 25px 0 35px;
 }
 
 .nav {
@@ -627,4 +615,19 @@ body textarea:required:valid {
 
 .slice_col ul li a {
   font-family: "OpenSansItalic", sans-serif;
+}
+
+.footer__slice.footer__slice_first .row {
+  margin: 0;
+  background-color: #e31e24;
+}
+
+.footer__slice .row {
+  margin: 0;
+  background-color: #e6e9ec;
+}
+
+.footer__slice_bottom .row {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
